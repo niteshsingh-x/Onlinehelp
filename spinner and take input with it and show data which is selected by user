@@ -1,0 +1,76 @@
+✅ ➡️1. activity_main.xml⬇️
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Selected"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
+
+
+✅ ➡️2. MainActivity.java⬇️
+
+package com.example.spinnerinput;
+
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    Spinner spData;
+    Button btnShow;
+    TextView tvResult;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        spData = findViewById(R.id.spData);
+        btnShow = findViewById(R.id.btnShow);
+        tvResult = findViewById(R.id.tvResult);
+
+        String[] items = {"Select Course", "BCA", "BBA", "BSc", "MCA"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_dropdown_item,
+                items
+        );
+
+        spData.setAdapter(adapter);
+
+        btnShow.setOnClickListener(v -> {
+            String selectedItem = spData.getSelectedItem().toString();
+            tvResult.setText("Selected: " + selectedItem);
+        });
+    }
+}
