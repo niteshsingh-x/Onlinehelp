@@ -1,0 +1,148 @@
+✅ ➡️ 1. activity_main.xml (Registration Form Layout) ⬇️
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Password"
+        android:inputType="textPassword"/>
+
+    <!-- Gender -->
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:text="Male"/>
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:text="Female"/>
+
+    </RadioGroup>
+
+    <!-- Hobbies -->
+    <CheckBox
+        android:id="@+id/cbReading"
+        android:text="Reading"/>
+
+    <CheckBox
+        android:id="@+id/cbGaming"
+        android:text="Gaming"/>
+
+    <CheckBox
+        android:id="@+id/cbTravel"
+        android:text="Traveling"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
+</ScrollView>
+
+
+✅ ➡️ 2. MainActivity.java ⬇️
+
+package com.example.registrationform;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.*;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText etName, etEmail, etPassword;
+    RadioGroup rgGender;
+    CheckBox cbReading, cbGaming, cbTravel;
+    Button btnRegister;
+    TextView tvResult;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        etName = findViewById(R.id.etName);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+
+        rgGender = findViewById(R.id.rgGender);
+
+        cbReading = findViewById(R.id.cbReading);
+        cbGaming = findViewById(R.id.cbGaming);
+        cbTravel = findViewById(R.id.cbTravel);
+
+        btnRegister = findViewById(R.id.btnRegister);
+        tvResult = findViewById(R.id.tvResult);
+
+        btnRegister.setOnClickListener(v -> {
+
+            String name = etName.getText().toString();
+            String email = etEmail.getText().toString();
+
+            int selectedId = rgGender.getCheckedRadioButtonId();
+            RadioButton rb = findViewById(selectedId);
+            String gender = rb.getText().toString();
+
+            String hobbies = "";
+
+            if (cbReading.isChecked())
+                hobbies += "Reading ";
+
+            if (cbGaming.isChecked())
+                hobbies += "Gaming ";
+
+            if (cbTravel.isChecked())
+                hobbies += "Travel ";
+
+            String result =
+                    "Name: " + name +
+                    "\nEmail: " + email +
+                    "\nGender: " + gender +
+                    "\nHobbies: " + hobbies;
+
+            tvResult.setText(result);
+        });
+    }
+}
+
