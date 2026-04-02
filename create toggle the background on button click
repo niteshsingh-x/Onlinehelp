@@ -1,0 +1,58 @@
+✅➡️ 1. activity_main.xml⬇️
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toggle Background"/>
+
+</LinearLayout>
+
+
+✅ ➡️2. MainActivity.java⬇️
+
+package com.example.backgroundtoggle;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    LinearLayout mainLayout;
+    Button btnToggle;
+    boolean isWhite = true;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mainLayout = findViewById(R.id.mainLayout);
+        btnToggle = findViewById(R.id.btnToggle);
+
+        btnToggle.setOnClickListener(v -> {
+
+            if (isWhite) {
+                mainLayout.setBackgroundColor(Color.LTGRAY);
+                isWhite = false;
+            } else {
+                mainLayout.setBackgroundColor(Color.WHITE);
+                isWhite = true;
+            }
+
+        });
+    }
+}
