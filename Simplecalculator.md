@@ -8,7 +8,7 @@ Q1. Simple Calculator App.
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="21dp">
+    android:padding="23dp">
 
     <EditText
         android:id="@+id/etFirstNum"
