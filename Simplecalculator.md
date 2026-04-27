@@ -22,7 +22,7 @@ Q1. Simple Calculator App.
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Second Number"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="19dp"
         android:inputType="numberDecimal"/>
 
     <TextView
