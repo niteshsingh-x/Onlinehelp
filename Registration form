@@ -16,13 +16,13 @@
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter  Name"/>
+        android:hint="Enter the Name"/>
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter  Email"
+        android:hint="Enter the Email"
         android:inputType="textEmailAddress"/>
 
     <EditText
