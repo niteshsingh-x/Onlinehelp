@@ -44,7 +44,7 @@
 
         <RadioButton
             android:id="@+id/rbFemale"
-            android:text="Female"/>
+            android:text="Male"/>
 
     </RadioGroup>
 
