@@ -40,7 +40,7 @@
 
         <RadioButton
             android:id="@+id/rbMale"
-            android:text="Male"/>
+            android:text="Female"/>
 
         <RadioButton
             android:id="@+id/rbFemale"
