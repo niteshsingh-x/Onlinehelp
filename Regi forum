@@ -16,7 +16,7 @@
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Corrrect Name"/>
+        android:hint="Enter Wrong Name"/>
 
     <EditText
         android:id="@+id/etEmail"
