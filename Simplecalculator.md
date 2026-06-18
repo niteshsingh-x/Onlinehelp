@@ -30,7 +30,7 @@ Q1. Simple Calculator App.
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Result"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:gravity="end"
         android:layout_marginTop="20dp"/>
 
