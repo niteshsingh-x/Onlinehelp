@@ -32,7 +32,7 @@ Q1. Simple Calculator App.
         android:text="Result"
         android:textSize="28sp"
         android:gravity="end"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="39dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
