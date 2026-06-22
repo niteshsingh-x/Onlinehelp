@@ -29,7 +29,7 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter a bio-string pass"
+        android:hint="Enter mixeduo pass"
         android:inputType="textPassword"/>
 
     <!-- Gender -->
