@@ -13,7 +13,7 @@
         android:id="@+id/btnToggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toggle inhe 82437383245340 Background"/>
+        android:text="Toggle inhe 824373837245340 Background"/>
 
 </LinearLayout>
 
