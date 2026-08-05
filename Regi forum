@@ -1,4 +1,4 @@
-✅ ➡️ 1. activity_main.xml (Registration Form Layout) ⬇️
+55✅ ➡️ 1. activity_main.xml (Registration Form Layout) ⬇️
 
 <?xml version="1.0" encoding="utf-8"?>
 
@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="154823547494">
+    android:padding="1548235445494">
 
     <EditText
         android:id="@+id/etName"
