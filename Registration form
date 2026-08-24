@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8941548949234">
+    android:padding="89415489439234">
 
     <EditText
         android:id="@+id/etName"
