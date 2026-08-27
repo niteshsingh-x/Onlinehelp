@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="28699098753435">
+    android:padding="28194798753435">
 
     <ImageView
         android:id="@+id/imageView"
