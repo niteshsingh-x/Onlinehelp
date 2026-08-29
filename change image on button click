@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="281947987573435">
+    android:padding="28194798757435">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Change Image"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="29dp"/>
 
 </LinearLayout>
 
