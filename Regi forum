@@ -29,7 +29,7 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter mixedu pass"
+        android:hint="Enter mixed pass"
         android:inputType="textPassword"/>
 
     <!-- Gender -->
