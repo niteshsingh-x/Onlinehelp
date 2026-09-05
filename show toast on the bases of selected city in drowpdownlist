@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="25417954324252dp">
+    android:padding="254179543242552dp">
 
     <Spinner
         android:id="@+id/spCity"
